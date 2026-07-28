@@ -1,0 +1,27 @@
+# @format
+
+name: 'Tool Versions'
+description: 'Output version numbers with .tool-versions file.'
+inputs:
+  path:
+    description: 'path of .tool-versions file'
+    required: true
+    default: '.tool-versions'
+outputs:
+  nodejs:
+    description: 'version of nodejs'
+  ruby:
+    description: 'version of ruby'
+  elixir:
+    description: 'version of elixir'
+  erlang:
+    description: 'version of erlang'
+  terraform:
+    description: 'version of terraform'
+  terragrunt:
+    description: 'version of terragrunt'
+  hugo:
+    description: "json object of hugo version e.g. { version: 'v0.100.0', is_extended: false }"
+runs:
+  using: 'node24'
+  main: 'dist/index.js'
