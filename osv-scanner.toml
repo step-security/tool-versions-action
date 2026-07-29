@@ -1,0 +1,3 @@
+[[IgnoredVulns]]
+id = "GHSA-mh99-v99m-4gvg"
+reason = "brace-expansion is a transitive dependency of jest (devDependency only, used for tests) via minimatch. No fix is available upstream yet from jest's dependency tree, and this code is never shipped in dist/."
